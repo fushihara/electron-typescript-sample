@@ -1,15 +1,15 @@
+import {Memo} from "./memo";
 import * as electron from 'electron';
 import {app, BrowserWindow} from 'electron';
 
 // メインウィンドウの参照をグローバルに持っておく。
-var mainWindow: Electron.BrowserWindow = null;
+let mainWindow: Electron.BrowserWindow = null;
+let p : Memo = new Memo("こちらメインプロセス");
+console.log(`メモ＝${p.getMessage()}`);
 
 // すべてのウィンドウが閉じられた際の動作
 app.on('window-all-closed', function() {
-  // OS X では、ウィンドウを閉じても一般的にアプリ終了はしないので除外。
-  if (process.platform != 'darwin') {
-    app.quit();
-  }
+  app.quit();
 });
 
 app.on('ready', function() {

@@ -1,32 +1,19 @@
 {
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
         {
-            "name": "Launch Electron App",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}\\main.js",
-            "stopOnEntry": false,
-            "args": [],
-            "cwd": "${workspaceRoot}",
-            "preLaunchTask": "build",
-            "runtimeExecutable": "${workspaceRoot}\\node_modules\\.bin\\electron.cmd",
-            "runtimeArgs": [
-                "--nolazy"
-            ],
-            "env": {},
-            "console": "internalConsole",
-            "sourceMaps": true,
-            "outFiles": []
-        },
-        {
-            "name": "Attach",
-            "type": "node",
-            "request": "attach",
-            "processId": "${command.PickProcess}",
-            "port": 5858,
-            "sourceMaps": true,
-            "outFiles": []
+            "preLaunchTask": "typescript",
+            "name": "Electron Main",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+            "program": "${workspaceFolder}/main.js",
+            "protocol": "inspector",
+            "outFiles": ["${workspaceRoot}/*.js"] 
         }
     ]
 }

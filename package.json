@@ -1,19 +1,19 @@
 {
-  "name": "electron_test",
+  "name": "vscode-electron-typescript",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "build": "tsc",
     "prestart": "npm run build",
-    "start": "electron .",
-    "pack": "electron-packager . sample --out=dist --arch=x64 --platform=win32 --version=1.7.5 --overwrite --prune --ignore=dist"
+    "start": "electron ."
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "electron": "^1.7.5",
-    "electron-packager": "^9.0.1",
-    "typescript": "^2.5.2"
+  "dependencies": {
+    "electron": "^1.7.9",
+    "typescript": "^2.6.1",
+    "typings": "^2.1.1"
   }
 }
